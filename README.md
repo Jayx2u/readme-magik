@@ -30,7 +30,16 @@ To get this running on your own profile, follow these steps:
     *   Paste the PAT you copied in the previous step into the "Secret" field.
     *   Click **Add secret**.
 
-5.  **Run the Workflow**
-    The workflow is configured to run automatically every hour or on a push to the `main` branch.
+5. **Enable the Workflow**
+   * In your forked repository, go to the **Actions** tab.
+   * Click **I understand my workflows, go ahead and enable them**.
+   * Select the **README magik** workflow from the list.
+   * Click **Enable workflow** located on the banner.
+
+6. **Run the Workflow**
+    The workflow is configured to run automatically every hour, on a push to the `main` branch, or you can run it manually.
+    *   To run it manually, go to the **Actions** tab in your forked repository.
+    *   Select the **README magik** workflow from the list.
+    *   Click the **Run workflow** dropdown and then the **Run workflow** button.
 
 After the workflow completes, your profile README should be updated!
