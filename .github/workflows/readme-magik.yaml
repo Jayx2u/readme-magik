@@ -46,9 +46,15 @@ jobs:
 
       - name: Commit and push changes
         run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE/${{ github.repository_owner }}"
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add README.md
-          git commit -m "🪄 Sprinkle the README with some magik" || echo "No changes to commit"
-          git push
+          # Commit only if there are changes
+          if ! git diff --staged --quiet; then
+            git commit -m "🪄 Sprinkle the README with some magik"
+            git push
+          else
+            echo "No changes to commit"
+          fi
         working-directory: ./${{ github.repository_owner }}
