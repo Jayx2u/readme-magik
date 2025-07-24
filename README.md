@@ -15,11 +15,12 @@ To get this running on your own profile, follow these steps:
 
 3.  **Generate a Personal Access Token (PAT)**
     The workflow requires a PAT to read your repository statistics and commit the updated README to your profile repository.
-    *   Go to **Settings** > **Developer settings** > **Personal access tokens** > **Tokens (classic)**.
-    *   Click **Generate new token** and select **Generate new token (classic)**.
-    *   Give it a descriptive name (e.g., `readme-magik-token`).
-    *   Set the expiration date to `Don't expire`.
-    *   Under **Select scopes**, check the `repo` box.
+    *   Go to **Settings** > **Developer settings** > **Personal access tokens** > **Fine-grained tokens**.
+    *   Click **Generate new token**.
+    *   Give it a name (e.g., `readme-magik-token`) and set the expiration to `No expiration`.
+    *   Under **Repository access**, select **Only select repositories** and choose your profile repository (e.g., `jayx2u/jayx2u`).
+    *   Under **Permissions**, go to **Repository permissions**.
+    *   Set **Contents** to `Read and write`. This allows the action to check out your profile repository and push the updated README.
     *   Click **Generate token** and copy the token value. You will not be able to see it again.
 
 4.  **Add the PAT as a Repository Secret**
