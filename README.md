@@ -11,6 +11,7 @@ Random human from down under tinkering with hardware, crafting Figma designs, an
 [`blind-defusal`](https://github.com/Jayx2u/blind-defusal) - A two-player, cooperative "bomb defusal" game made during Undercity 2025 @ Github HQ
 
 <sup>*Please star it! It would mean a lot <3*</sup>
+
 ---
 
 **📡 Some stats**
@@ -29,7 +30,7 @@ Random human from down under tinkering with hardware, crafting Figma designs, an
 
 ---
 
-📮 Wanna slide into my contacts?
+**📮 Wanna slide into my contacts?**
 ```text
 Email: me@jayx2u.fyi
 ```
@@ -37,5 +38,5 @@ Email: me@jayx2u.fyi
 ---
 
 <p align="right">
-  <em>Last updated: 24 July 2025 09:11:51 UTC</em>
+  <em>Last updated: 24 July 2025 09:12:54 UTC</em>
 </p>
