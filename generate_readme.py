@@ -1,6 +1,6 @@
 import os
 import requests
-from datetime import datatime, datetime
+from datetime import datetime, datetime
 from collections import defaultdict
 
 USERNAME = "Jayx2u"
@@ -53,7 +53,7 @@ def generate_readme(stats):
     readme_content = template.replace("{{TOTAL_STARS}}", str(stats["total_stars"]))
     readme_content = readme_content.replace("{{PUBLIC_REPOS}}", str(stats["public_repos"]))
     readme_content = readme_content.replace("{{PUBLIC_LANGUAGES}}", stats["top_languages"])
-    readme_content = readme_content.replace("{{LAST_UPDATED}}", datetime.utcnow().strftime("%d %B %Y")) # Replace deprecated call
+    readme_content = readme_content.replace("{{LAST_UPDATED}}", datetime.now(timezone.utc).strftime("%d %B %Y")) # Replace deprecated call
 
     with open(OUTPUT_PATH, "w") as f:
         f.write(readme_content)
