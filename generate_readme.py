@@ -57,7 +57,7 @@ def fetch_stats():
 
                 # Truncate long commit messages
                 commit_message = commit['message'].split('\n')[0]
-                commit_line = f'- [`{repo_name}`]({repo_url}) - "{commit_message}"'
+                commit_line = f'- [`{repo_name}`]({repo_url}) - *"{commit_message}"*'
                 latest_commits.append(commit_line)
                 if len(latest_commits) >= MAX_COMMITS:
                     break
