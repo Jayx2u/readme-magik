@@ -6,6 +6,7 @@ on:
       - main
   schedule:
     - cron: "0 */1 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -14,8 +15,17 @@ jobs:
   magik:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout generator repository
         uses: actions/checkout@v4
+        with:
+          path: readme-magik
+
+      - name: Checkout target repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/${{ github.repository_owner }}
+          token: ${{ secrets.REPO_PAT }} # PAT with repo scope
+          path: ${{ github.repository_owner }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -27,8 +37,10 @@ jobs:
 
       - name: Generate README
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python generate_readme.py
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
+        run: python readme-magik/generate_readme.py
+        working-directory: ./${{ github.repository_owner }}
 
       - name: Commit and push changes
         run: |
@@ -40,5 +52,5 @@ jobs:
             git push
           else
             echo "README.md is already up-to-date."
-          
           fi
+        working-directory: ./${{ github.repository_owner }}

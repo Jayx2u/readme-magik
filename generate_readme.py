@@ -3,7 +3,7 @@ import requests
 from datetime import datetime, timezone
 from collections import defaultdict
 
-USERNAME = "Jayx2u"
+USERNAME = os.getenv("GITHUB_USERNAME")
 TEMPLATE_PATH = "templates/README.md.tpl"
 OUTPUT_PATH = "README.md"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
@@ -12,6 +12,8 @@ MAX_COMMITS = 5
 def fetch_stats():
     if not GITHUB_TOKEN:
         raise ValueError("GITHUB_TOKEN must be set")
+    if not USERNAME:
+        raise ValueError("GITHUB_USERNAME environment variable not set")
 
     headers = {"Authorization": f"token {GITHUB_TOKEN}"}
     repos_url = f"https://api.github.com/users/{USERNAME}/repos?per_page=100&type=owner"

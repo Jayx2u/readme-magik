@@ -1,42 +1,35 @@
-[![Github Banner](https://github.com/Jayx2u/jayx2u/blob/main/jayx2u-github-banner.png?raw=true)](https://jayx2u.carrd.co)
+# README MAGIK
+![readme-magik-banner.png](readme-magik-banner.png)
 
-### Hi there 👋, I'm Jayx2u!
+This project uses a GitHub Action to automatically generate and update the `README.md` on your GitHub profile repository (`your-username/your-username`).
 
-Random human from down under tinkering with hardware, crafting Figma designs, and wrangling code.
+## Setup Guide
 
----
+To get this running on your own profile, follow these steps:
 
-**💫 Spotlight**
+1.  **Fork this Repository**
+    Click the "Fork" button at the top-right of this page to create your own copy of this project.
 
-[`blind-defusal`](https://github.com/Jayx2u/blind-defusal) - A two-player, cooperative "bomb defusal" game made during Undercity 2025 @ Github HQ
+2.  **Create a Profile Repository**
+    If you don't have one already, create a new public repository with the same name as your GitHub username (e.g., `jayx2u/jayx2u`). A `README.md` file in this repository will appear on your public profile page.
 
-<sup>*Please star it! It would mean a lot <3*</sup>
+3.  **Generate a Personal Access Token (PAT)**
+    The workflow requires a PAT to read your repository statistics and commit the updated README to your profile repository.
+    *   Go to **Settings** > **Developer settings** > **Personal access tokens** > **Tokens (classic)**.
+    *   Click **Generate new token** and select **Generate new token (classic)**.
+    *   Give it a descriptive name (e.g., `readme-magik-token`).
+    *   Set the expiration date to `Don't expire`.
+    *   Under **Select scopes**, check the `repo` box.
+    *   Click **Generate token** and copy the token value. You will not be able to see it again.
 
----
+4.  **Add the PAT as a Repository Secret**
+    *   In your forked `readme-magik` repository, go to **Settings** > **Secrets and variables** > **Actions**.
+    *   Click **New repository secret**.
+    *   Name the secret `REPO_PAT`.
+    *   Paste the PAT you copied in the previous step into the "Secret" field.
+    *   Click **Add secret**.
 
-**📡 Some stats**
-- **Total Stars Earned:** 21
-- **Public Repositories:** 11
-- **Top Languages:** Python, TypeScript, JavaScript
+5.  **Run the Workflow**
+    The workflow is configured to run automatically every hour or on a push to the `main` branch.
 
----
-
-**🪄 My latest commits :>**
-- [`Jayx2u/jayx2u`](https://github.com/Jayx2u/jayx2u) - *"Fix UnboundLocalError again?"*
-- [`Jayx2u/jayx2u`](https://github.com/Jayx2u/jayx2u) - *"Fix UnboundLocalError"*
-- [`Jayx2u/jayx2u`](https://github.com/Jayx2u/jayx2u) - *"Fix missing import and replace deprecated code"*
-- [`Jayx2u/jayx2u`](https://github.com/Jayx2u/jayx2u) - *"Fix missing import and replace deprecated code"*
-- [`Jayx2u/jayx2u`](https://github.com/Jayx2u/jayx2u) - *"Add README magik actions"*
-
----
-
-**📮 Wanna slide into my contacts?**
-```text
-Email: me@jayx2u.fyi
-```
-
----
-
-<p align="right">
-  <em>Last updated: 24 July 2025 10:23:04 UTC</em>
-</p>
+After the workflow completes, your profile README should be updated!
