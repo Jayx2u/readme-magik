@@ -12,6 +12,9 @@ Random human from down under tinkering with hardware, crafting Figma designs, an
 
 ---
 
+### Latest Commits
+{{LATEST_COMMITS}}
+
 <p align="center">
   <em>Last updated: {{LAST_UPDATED}}</em>
 </p>
