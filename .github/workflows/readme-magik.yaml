@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ${{ github.repository_owner }}/${{ github.repository_owner }}
-          token: ${{ secrets.REPO_PAT }} # PAT with repo scope
+          token: ${{ secrets.REPO_PAT }}
           path: ${{ github.repository_owner }}
 
       - name: Setup Python
@@ -34,12 +34,13 @@ jobs:
 
       - name: Install dependencies
         run: pip install requests
+        working-directory: ./readme-magik
 
       - name: Generate README
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
-        run: python readme-magik/generate_readme.py
+        run: python ../readme-magik/generate_readme.py
         working-directory: ./${{ github.repository_owner }}
 
       - name: Commit and push changes
