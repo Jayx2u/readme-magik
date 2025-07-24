@@ -50,7 +50,7 @@ def generate_readme(stats):
     with open(TEMPLATE_PATH) as f:
         template: f.read()
 
-    readme_content = template.replace("{{TOTAL_STARS}}", str(stats["total_stars"]))
+    readme_content = readme_content.replace("{{TOTAL_STARS}}", str(stats["total_stars"]))
     readme_content = readme_content.replace("{{PUBLIC_REPOS}}", str(stats["public_repos"]))
     readme_content = readme_content.replace("{{PUBLIC_LANGUAGES}}", stats["top_languages"])
     readme_content = readme_content.replace("{{LAST_UPDATED}}", datetime.now(timezone.utc).strftime("%d %B %Y"))
