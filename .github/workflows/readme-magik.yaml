@@ -41,8 +41,8 @@ jobs:
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
-        run: python ../readme-magik/generate_readme.py
-        working-directory: ./${{ github.repository_owner }}
+        run: python generate_readme.py ../${{ github.repository_owner }}
+        working-directory: ./readme-magik
 
       - name: Commit and push changes
         run: |
