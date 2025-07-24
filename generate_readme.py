@@ -47,12 +47,12 @@ def fetch_stats():
     }
 
 def generate_readme(stats):
-    with open(TEMPLATE_PATH) as f:
-        template: f.read()
+    with open(TEMPLATE_PATH, "r") as f:
+        template = f.read()
 
-    readme_content = readme_content.replace("{{TOTAL_STARS}}", str(stats["total_stars"]))
+    readme_content = template.replace("{{TOTAL_STARS}}", str(stats["total_stars"]))
     readme_content = readme_content.replace("{{PUBLIC_REPOS}}", str(stats["public_repos"]))
-    readme_content = readme_content.replace("{{PUBLIC_LANGUAGES}}", stats["top_languages"])
+    readme_content = readme_content.replace("{{TOP_LANGUAGES}}", stats["top_languages"])
     readme_content = readme_content.replace("{{LAST_UPDATED}}", datetime.now(timezone.utc).strftime("%d %B %Y"))
 
     with open(OUTPUT_PATH, "w") as f:
@@ -61,4 +61,3 @@ def generate_readme(stats):
 if __name__ == "__main__":
     stats = fetch_stats()
     generate_readme(stats)
-
