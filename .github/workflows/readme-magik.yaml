@@ -26,6 +26,7 @@ jobs:
           repository: ${{ github.repository_owner }}/${{ github.repository_owner }}
           token: ${{ secrets.REPO_PAT }}
           path: ${{ github.repository_owner }}
+          ref: main
 
       - name: Setup Python
         uses: actions/setup-python@v5
