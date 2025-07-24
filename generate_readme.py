@@ -1,6 +1,6 @@
 import os
 import requests
-from datetime import datetime, datetime
+from datetime import datetime, timezone
 from collections import defaultdict
 
 USERNAME = "Jayx2u"
@@ -13,7 +13,7 @@ def fetch_stats():
         raise ValueError("GITHUB_TOKEN must be set")
 
     headers = {"Authorization": f"token {GITHUB_TOKEN}"}
-    repos_url = f"https://api.github.com/repos/{USERNAME}/repos?per_page=100&type=owner"
+    repos_url = f"https://api.github.com/users/{USERNAME}/repos?per_page=100&type=owner"
 
     total_stars = 0
     public_repos = 0
@@ -53,7 +53,7 @@ def generate_readme(stats):
     readme_content = template.replace("{{TOTAL_STARS}}", str(stats["total_stars"]))
     readme_content = readme_content.replace("{{PUBLIC_REPOS}}", str(stats["public_repos"]))
     readme_content = readme_content.replace("{{PUBLIC_LANGUAGES}}", stats["top_languages"])
-    readme_content = readme_content.replace("{{LAST_UPDATED}}", datetime.now(timezone.utc).strftime("%d %B %Y")) # Replace deprecated call
+    readme_content = readme_content.replace("{{LAST_UPDATED}}", datetime.now(timezone.utc).strftime("%d %B %Y"))
 
     with open(OUTPUT_PATH, "w") as f:
         f.write(readme_content)
