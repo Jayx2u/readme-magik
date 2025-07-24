@@ -22,11 +22,11 @@ Random human from down under tinkering with hardware, crafting Figma designs, an
 ---
 
 **🪄 My latest commits :>**
+- [`Jayx2u/jayx2u`](https://github.com/Jayx2u/jayx2u) - *"Fix missing import and replace deprecated code"*
+- [`Jayx2u/jayx2u`](https://github.com/Jayx2u/jayx2u) - *"Add README magik actions"*
 - [`Jayx2u/vocalink`](https://github.com/Jayx2u/vocalink) - *"readme: Change some formatting"*
 - [`Jayx2u/vocalink`](https://github.com/Jayx2u/vocalink) - *"bom: Add camera cost (somehow forgot the main sensor)"*
 - [`Jayx2u/vocalink`](https://github.com/Jayx2u/vocalink) - *"journal: Update time"*
-- [`Jayx2u/vocalink`](https://github.com/Jayx2u/vocalink) - *"bom: Update with correct cost"*
-- [`Jayx2u/vocalink`](https://github.com/Jayx2u/vocalink) - *"bom: Update with correct cost"*
 
 ---
 
@@ -38,5 +38,5 @@ Email: me@jayx2u.fyi
 ---
 
 <p align="right">
-  <em>Last updated: 24 July 2025 09:17:03 UTC</em>
+  <em>Last updated: 24 July 2025 10:13:53 UTC</em>
 </p>
