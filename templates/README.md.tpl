@@ -34,5 +34,5 @@ Email: me@jayx2u.fyi
 ---
 
 <p align="right">
-  <em>Last updated: {{LAST_UPDATED}}</em>
+  <em>Last updated: {{LAST_UPDATED}} // Automated with [readme-magik](https://github.com/Jayx2u/readme-magik)</em>
 </p>
