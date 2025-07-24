@@ -43,3 +43,6 @@ To get this running on your own profile, follow these steps:
     *   Click the **Run workflow** dropdown and then the **Run workflow** button.
 
 After the workflow completes, your profile README should be updated!
+
+## Customisation
+Simply edit the contents within [README.md.tpl](templates/README.md.tpl) to change how the README will look like!
