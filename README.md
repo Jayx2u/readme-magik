@@ -29,6 +29,13 @@ Random human from down under tinkering with hardware, crafting Figma designs, an
 
 ---
 
+📮 Wanna slide into my contacts?
+```text
+Email: me@jayx2u.fyi
+```
+
+---
+
 <p align="right">
-  <em>Last updated: 24 July 2025 09:08:35 UTC</em>
+  <em>Last updated: 24 July 2025 09:11:51 UTC</em>
 </p>
