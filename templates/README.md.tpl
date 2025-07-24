@@ -13,7 +13,7 @@ Random human from down under tinkering with hardware, crafting Figma designs, an
 <sup>*Please star it! It would mean a lot <3*</sup>
 ---
 
-**📡 Some stats
+**📡 Some stats**
 - **Total Stars Earned:** {{TOTAL_STARS}}
 - **Public Repositories:** {{PUBLIC_REPOS}}
 - **Top Languages:** {{TOP_LANGUAGES}}
@@ -23,6 +23,8 @@ Random human from down under tinkering with hardware, crafting Figma designs, an
 **🪄 My latest commits :>**
 {{LATEST_COMMITS}}
 
-<p align="center">
+---
+
+<p align="right">
   <em>Last updated: {{LAST_UPDATED}}</em>
 </p>
