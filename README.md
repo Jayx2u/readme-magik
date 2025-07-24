@@ -6,13 +6,21 @@ Random human from down under tinkering with hardware, crafting Figma designs, an
 
 ---
 
+**💫 Spotlight**
+
+[`blind-defusal`](https://github.com/Jayx2u/blind-defusal) - A two-player, cooperative "bomb defusal" game made during Undercity 2025 @ Github HQ
+
+<sup>*Please star it! It would mean a lot <3*</sup>
+---
+
+**📡 Some stats
 - **Total Stars Earned:** 21
 - **Public Repositories:** 11
 - **Top Languages:** Python, TypeScript, JavaScript
 
 ---
 
-### Latest Commits
+**🪄 My latest commits :>**
 - [`Jayx2u/vocalink`](https://github.com/Jayx2u/vocalink) - "readme: Change some formatting"
 - [`Jayx2u/vocalink`](https://github.com/Jayx2u/vocalink) - "bom: Add camera cost (somehow forgot the main sensor)"
 - [`Jayx2u/vocalink`](https://github.com/Jayx2u/vocalink) - "journal: Update time"
@@ -20,5 +28,5 @@ Random human from down under tinkering with hardware, crafting Figma designs, an
 - [`Jayx2u/vocalink`](https://github.com/Jayx2u/vocalink) - "bom: Update with correct cost"
 
 <p align="center">
-  <em>Last updated: 24 July 2025 08:31:38 UTC</em>
+  <em>Last updated: 24 July 2025 09:06:55 UTC</em>
 </p>
