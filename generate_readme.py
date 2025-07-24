@@ -79,7 +79,7 @@ def generate_readme(stats):
     readme_content = readme_content.replace("{{PUBLIC_REPOS}}", str(stats["public_repos"]))
     readme_content = readme_content.replace("{{TOP_LANGUAGES}}", stats["top_languages"])
     readme_content = readme_content.replace("{{LATEST_COMMITS}}", stats["latest_commits"])
-    readme_content = readme_content.replace("{{LAST_UPDATED}}", datetime.now(timezone.utc).strftime("%d %B %Y"))
+    readme_content = readme_content.replace("{{LAST_UPDATED}}", datetime.now(timezone.utc).strftime("%d %B %Y %H:%M:%S UTC"))
 
     with open(OUTPUT_PATH, "w") as f:
         f.write(readme_content)
