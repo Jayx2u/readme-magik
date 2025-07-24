@@ -40,3 +40,5 @@ jobs:
             git push
           else
             echo "README.md is already up-to-date."
+          
+          fi
