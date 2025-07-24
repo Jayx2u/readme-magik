@@ -13,7 +13,7 @@ Random human from down under tinkering with hardware, crafting Figma designs, an
 <sup>*Please star it! It would mean a lot <3*</sup>
 ---
 
-**📡 Some stats
+**📡 Some stats**
 - **Total Stars Earned:** 21
 - **Public Repositories:** 11
 - **Top Languages:** Python, TypeScript, JavaScript
@@ -27,6 +27,8 @@ Random human from down under tinkering with hardware, crafting Figma designs, an
 - [`Jayx2u/vocalink`](https://github.com/Jayx2u/vocalink) - "bom: Update with correct cost"
 - [`Jayx2u/vocalink`](https://github.com/Jayx2u/vocalink) - "bom: Update with correct cost"
 
-<p align="center">
-  <em>Last updated: 24 July 2025 09:06:55 UTC</em>
+---
+
+<p align="right">
+  <em>Last updated: 24 July 2025 09:08:35 UTC</em>
 </p>
