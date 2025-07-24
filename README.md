@@ -7,7 +7,7 @@ Random human from down under tinkering with hardware, crafting Figma designs, an
 ---
 
 - **Total Stars Earned:** 21
-- **Public Repositories:** 10
+- **Public Repositories:** 11
 - **Top Languages:** Python, TypeScript, JavaScript
 
 ---
