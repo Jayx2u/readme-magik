@@ -1,11 +1,11 @@
 import os
+import sys
 import requests
 from datetime import datetime, timezone
 from collections import defaultdict
 
 USERNAME = os.getenv("GITHUB_USERNAME")
 TEMPLATE_PATH = "templates/README.md.tpl"
-OUTPUT_PATH = "README.md"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 MAX_COMMITS = 5
 
@@ -74,7 +74,7 @@ def fetch_stats():
         "latest_commits": "\n".join(latest_commits),
     }
 
-def generate_readme(stats):
+def generate_readme(stats, output_path):
     with open(TEMPLATE_PATH, "r") as f:
         template = f.read()
 
@@ -84,9 +84,17 @@ def generate_readme(stats):
     readme_content = readme_content.replace("{{LATEST_COMMITS}}", stats["latest_commits"])
     readme_content = readme_content.replace("{{LAST_UPDATED}}", datetime.now(timezone.utc).strftime("%d %B %Y %H:%M:%S UTC"))
 
-    with open(OUTPUT_PATH, "w") as f:
+    with open(output_path, "w") as f:
         f.write(readme_content)
+    print(f"README.md generated at {output_path}")
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Error: Output directory not provided.")
+        sys.exit(1)
+
+    output_dir = sys.argv[1]
+    output_path = os.path.join(output_dir, 'README.md')
+
     stats = fetch_stats()
-    generate_readme(stats)
+    generate_readme(stats, output_path)
