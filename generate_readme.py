@@ -59,6 +59,10 @@ def fetch_stats():
     for event in events:
         if event['type'] == 'PushEvent':
             for commit in event['payload']['commits']:
+                # Only include commits from USERNAME
+                if commit['author']['name'] != USERNAME:
+                    continue
+
                 repo_name = event['repo']['name']
                 repo_url = f"https://github.com/{repo_name}"
 
