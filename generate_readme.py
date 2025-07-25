@@ -53,7 +53,7 @@ def fetch_stats():
     event_headers = headers.copy()
     event_headers["Cache-Control"] = "no-cache"
 
-    response = requests.get(events_url, headers=headers)
+    response = requests.get(events_url, headers=event_headers)
     response.raise_for_status()
     events = response.json()
 
