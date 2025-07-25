@@ -9,6 +9,7 @@ TEMPLATE_PATH = "templates/README.md.tpl"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 MAX_COMMITS = 5
 
+
 def fetch_stats():
     if not GITHUB_TOKEN:
         raise ValueError("GITHUB_TOKEN must be set")
@@ -57,12 +58,9 @@ def fetch_stats():
     events = response.json()
 
     for event in events:
-        if event['type'] == 'PushEvent':
+        # Filter PushEvents by the actor's login to match the USERNAME
+        if event['type'] == 'PushEvent' and event['actor']['login'] == USERNAME:
             for commit in event['payload']['commits']:
-                # Only include commits from USERNAME
-                if commit['author']['name'] != USERNAME:
-                    continue
-
                 repo_name = event['repo']['name']
                 repo_url = f"https://github.com/{repo_name}"
 
@@ -83,6 +81,7 @@ def fetch_stats():
         "latest_commits": "\n".join(latest_commits),
     }
 
+
 def generate_readme(stats, output_path):
     with open(TEMPLATE_PATH, "r") as f:
         template = f.read()
@@ -96,6 +95,7 @@ def generate_readme(stats, output_path):
     with open(output_path, "w") as f:
         f.write(readme_content)
     print(f"README.md generated at {output_path}")
+
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
