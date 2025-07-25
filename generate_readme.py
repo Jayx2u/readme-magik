@@ -47,6 +47,11 @@ def fetch_stats():
 
     # Fetch latest commits
     latest_commits = []
+
+    # Add 'Cache-Control: no-cache' to request fresh data
+    event_headers = headers.copy()
+    event_headers["Cache-Control"] = "no-cache"
+
     response = requests.get(events_url, headers=headers)
     response.raise_for_status()
     events = response.json()
