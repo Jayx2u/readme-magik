@@ -58,9 +58,12 @@ def fetch_stats():
     events = response.json()
 
     for event in events:
-        # Filter PushEvents by the actor's login to match the USERNAME
-        if event['type'] == 'PushEvent' and event['actor']['login'] == USERNAME:
+        if event['type'] == 'PushEvent':
             for commit in event['payload']['commits']:
+                # Filter out commits from the github-actions bot
+                if commit['author']['name'] == 'github-actions[bot]':
+                    continue
+
                 repo_name = event['repo']['name']
                 repo_url = f"https://github.com/{repo_name}"
 
